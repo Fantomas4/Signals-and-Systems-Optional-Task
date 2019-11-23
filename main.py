@@ -11,23 +11,44 @@ def MyConvolve(a_vector, b_vector):
 
     # j holds the index of the last element of a_vector that belongs
     # to the sliding window's current instance
-    j = len(b_vector) - 1
+    j = 0
 
     # n holds the index of the result vector where
     # we are currently doing calculations
     n = 0
 
+
+    # At first, the sliding window has not fully covered
+    # the indexes of vector A
+    while j < len(b_vector) - 1:
+        b_index = 0
+        for k in range(i, j + 1):
+            y_vector[n] += a_vector[k] * b_vector[b_index]
+            b_index += 1
+        j += 1
+        n += 1
+
+    # The sliding window has now fully covered the first
+    # 5 indexes of vector A
     while j < len(a_vector):
         b_index = 0
         for k in range(i, j + 1):
             y_vector[n] += a_vector[k] * b_vector[b_index]
             b_index += 1
-
         print("y_vector is: " + str(y_vector))
         # print("DIAG: For n = " + str(n) + " y_vector is: " + str(y_vector[n]))
-
         i += 1
         j += 1
+        n += 1
+
+    # Finally, the sliding window has to fully stop covering all
+    # of A vector's indexes
+    while i < j:
+        b_index = 0
+        for k in range(i, j):
+            y_vector[n] += a_vector[k] * b_vector[b_index]
+            b_index += 1
+        i += 1
         n += 1
 
     return y_vector

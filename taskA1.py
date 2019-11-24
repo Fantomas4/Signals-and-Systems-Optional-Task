@@ -1,12 +1,13 @@
-import my_convolve
+import test2
 
 if __name__ == '__main__':
     # Get user's input for N and check whether it is greater than 10
-    a_vector_len = int(input("Enter the random vector length N (N>10): "))
-    while a_vector_len <= 10:
-        a_vector_len = int(input("Wrong input. N must be greater than 10. Try again: "))
-
-    print("DIAG: vector_len: ", a_vector_len)
+    # a_vector_len = int(input("Enter the random vector length N (N>10): "))
+    # while a_vector_len <= 10:
+    #     a_vector_len = int(input("Wrong input. N must be greater than 10. Try again: "))
+    #
+    # print("DIAG: vector_len: ", a_vector_len)
+    a_vector_len = 13
 
     # # generate random floating point values
     # from numpy.random import seed
@@ -29,6 +30,6 @@ if __name__ == '__main__':
 
     print("DIAG: b_vector: ", b_vector)
 
-    print(my_convolve.MyConvolve(a_vector, b_vector))
+    print(test2.MyConvolve(a_vector, b_vector))
 
 

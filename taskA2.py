@@ -1,6 +1,6 @@
 import wave
 import numpy
-import my_convolve
+import test
 
 if __name__ == '__main__':
     sound_file_1 = wave.open("sample_audio.wav", "r")
@@ -21,9 +21,9 @@ if __name__ == '__main__':
 
     sample_audio_vector = numpy.fromstring(signal_1, dtype="int16").tolist()
     pink_noise_vector = numpy.fromstring(signal_2, dtype="int16").tolist()
-    print(sample_audio_vector)
-    print(pink_noise_vector)
+    # print(sample_audio_vector)
+    # print(pink_noise_vector)
 
-    convolution_vector = my_convolve.MyConvolve(sample_audio_vector, pink_noise_vector)
+    convolution_vector = test.MyConvolve(sample_audio_vector, pink_noise_vector)
     print(convolution_vector)
 

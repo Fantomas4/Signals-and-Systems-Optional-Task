@@ -10,4 +10,4 @@ if __name__ == '__main__':
     dataPink, y1 = librosa.load("pink_noise.wav", min(fs1, fs2))
     dataSample, y2 = librosa.load("sample_audio.wav", min(fs1, fs2))
 
-    wavfile.write("output.wav", y1, my_convolve.MyConvolve(dataSample, dataPink))
+    wavfile.write("pinkNoise_sampleAudio.wav", y1, my_convolve.MyConvolve(dataSample, dataPink))

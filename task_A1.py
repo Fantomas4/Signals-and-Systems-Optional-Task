@@ -1,4 +1,4 @@
-import test2
+import my_convolve
 
 if __name__ == '__main__':
     # Get user's input for N and check whether it is greater than 10
@@ -30,6 +30,6 @@ if __name__ == '__main__':
 
     print("DIAG: b_vector: ", b_vector)
 
-    print(test2.MyConvolve(a_vector, b_vector))
+    print(my_convolve.MyConvolve(a_vector, b_vector))
 
 

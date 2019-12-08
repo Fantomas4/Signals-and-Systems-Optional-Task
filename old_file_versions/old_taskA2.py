@@ -1,10 +1,10 @@
 import wave
 import numpy
-import test
+from old_file_versions import test
 
 if __name__ == '__main__':
-    sound_file_1 = wave.open("sample_audio.wav", "r")
-    sound_file_2 = wave.open("pink_noise.wav", "r")
+    sound_file_1 = wave.open("../sample_audio.wav", "r")
+    sound_file_2 = wave.open("../pink_noise.wav", "r")
 
     print("Number of frames in sound_file_1 is: ", sound_file_1.getnframes())
     print("Number of frames in sound_file_2 is: ", sound_file_2.getnframes())

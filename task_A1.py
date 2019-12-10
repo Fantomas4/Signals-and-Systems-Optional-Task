@@ -1,3 +1,5 @@
+from scipy.io import wavfile
+
 import my_convolve
 
 if __name__ == '__main__':
@@ -31,5 +33,4 @@ if __name__ == '__main__':
     print("DIAG: b_vector: ", b_vector)
 
     print(my_convolve.MyConvolve(a_vector, b_vector))
-
 

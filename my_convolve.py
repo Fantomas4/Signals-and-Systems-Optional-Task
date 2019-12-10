@@ -1,6 +1,8 @@
 import threading
 import time
 
+import numpy as np
+
 
 def ConvolutionThread(a_vector, b_vector, index, y_vector, yLocker):
     number = 0
@@ -24,7 +26,9 @@ def MyConvolve(a_vector, b_vector):
     """
     b_vector is smaller that the a_vector
     """
+
     y_vector = [0 for i in range(len(a_vector) + len(b_vector) - 1)]
+
     maximum = len(y_vector)
     print(maximum)
     yLocker = threading.Lock()
